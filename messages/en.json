@@ -9,7 +9,8 @@
     "adminBooks": "Manage Books",
     "adminUsers": "Manage Users",
     "adminTransactions": "All Transactions",
-    "adminFines": "Fine Management"
+    "adminFines": "Fine Management",
+    "about": "About & Help"
   },
   "footer": {
     "tagline": "Your gateway to knowledge — NCBA&E Central Library Management System, Final Year Project.",
@@ -28,7 +29,8 @@
     "fineRate": "Overdue fine: Rs. 5 per day",
     "maxBooks": "Maximum 5 books per member",
     "copyright": "© 2025 NCBA&E Central Library. All rights reserved.",
-    "fyp": "Library Management System — NCBA&E FYP"
+    "fyp": "Library Management System — NCBA&E FYP",
+    "about": "About & Help"
   },
   "auth": {
     "heroHeading": "NCBA&E Central Library",
@@ -96,536 +98,129 @@
       "hint": "keep your session active on trusted devices for up to 7 days"
     },
     {
-      "field": "Sign In",
-      "hint": "authenticates via JWT and redirects to your personalised dashboard"
+      "field": "Student / Member ID",
+      "hint": "your roll number (students) or employee ID (faculty/staff)"
     },
     {
       "field": "Full Name",
-      "hint": "as it appears on your CNIC or student card"
-    },
-    {
-      "field": "Member ID",
-      "hint": "your student roll number or faculty employee ID"
-    },
-    {
-      "field": "Email Address",
-      "hint": "use your institutional email for faster verification"
+      "hint": "enter your name exactly as it appears on your student card or CNIC"
     },
     {
       "field": "Phone Number",
-      "hint": "optional; used for overdue notifications"
-    },
-    {
-      "field": "Password",
-      "hint": "at least 8 characters, one uppercase letter, and one number"
+      "hint": "optional — used only for overdue return notifications"
     },
     {
       "field": "Confirm Password",
-      "hint": "must match the password entered above"
-    },
-    {
-      "field": "Create Account",
-      "hint": "submits your registration for librarian approval"
-    }
-  ],
-  "footer-link": [
-    {
-      "label": "Privacy Policy",
-      "description": "how we store and protect your member data"
-    },
-    {
-      "label": "Library Rules & Regulations",
-      "description": "borrowing limits, loan periods, and fine policy"
-    },
-    {
-      "label": "Contact the Librarian",
-      "description": "helpdesk@ncbae.edu.pk | Ext. 204"
+      "hint": "re-enter the same password to confirm"
     }
   ],
   "dashboard": {
-    "headerHeading": "Welcome back, Ahmed.",
-    "headerBody": "Here's a snapshot of your library activity at NCBA&E Central Library. Track your issued books, outstanding fines, and recent transactions — all in one place.",
-    "headerCta": "Browse New Books",
-    "statsHeading": "Your Library at a Glance",
-    "statsBody": "Key metrics from your current membership period, updated in real time.",
-    "issuedHeading": "Currently Issued Books",
-    "issuedBody": "You have 3 books checked out. Return them on or before their due date to avoid overdue fines (Rs. 5 per day after the 14-day loan period).",
-    "issuedCta": "View All Transactions",
-    "finesHeading": "Pending Fines",
-    "finesBody": "You have an outstanding fine of Rs. 35 for the overdue return of Database System Concepts (7 days overdue at Rs. 5/day). Please visit the library counter or see the Fines page for details.",
-    "finesCta": "View Fine Details",
-    "activityHeading": "Recent Activity",
-    "activityBody": "A log of your latest transactions and library interactions.",
-    "activityCta": "View Full History",
-    "ctaHeading": "Ready to Find Your Next Book?",
-    "ctaBody": "Explore the NCBA&E Central Library catalogue — search by title, author, ISBN, or category and check real-time availability before heading to the shelf.",
-    "ctaButton": "Search the Catalogue"
+    "heading": "My Library Dashboard",
+    "subheading": "Track your borrowed books, due dates, and outstanding fines at a glance.",
+    "activeLoans": "Active Loans",
+    "overdueItems": "Overdue Items",
+    "totalBorrowed": "Total Borrowed",
+    "pendingFines": "Pending Fines",
+    "recentActivity": "Recent Activity",
+    "noActivity": "No recent activity found.",
+    "viewAll": "View All"
   },
-  "stats-overview": [
-    {
-      "label": "Books Currently Issued",
-      "value": "3",
-      "detail": "active loans out of your 5-book limit"
-    },
-    {
-      "label": "Due This Week",
-      "value": "2",
-      "detail": "books must be returned by Friday, 24 Jan 2025"
-    },
-    {
-      "label": "Overdue Books",
-      "value": "1",
-      "detail": "book is past its due date; a fine is accruing"
-    },
-    {
-      "label": "Pending Fines",
-      "value": "Rs. 35",
-      "detail": "outstanding across 1 overdue transaction"
-    },
-    {
-      "label": "Books Returned (This Month)",
-      "value": "4",
-      "detail": "books successfully returned in January"
-    },
-    {
-      "label": "Total Transactions (All Time)",
-      "value": "27",
-      "detail": "issue/return records on your account"
-    }
-  ],
-  "issued-books": [
-    {
-      "title": "Introduction to Algorithms",
-      "author": "Thomas H. Cormen",
-      "issued": "10 Jan 2025",
-      "due": "24 Jan 2025",
-      "status": "Due Soon"
-    },
-    {
-      "title": "Clean Code: A Handbook of Agile Software Craftsmanship",
-      "author": "Robert C. Martin",
-      "issued": "14 Jan 2025",
-      "due": "28 Jan 2025",
-      "status": "On Time"
-    },
-    {
-      "title": "Database System Concepts",
-      "author": "Abraham Silberschatz",
-      "issued": "03 Jan 2025",
-      "due": "17 Jan 2025",
-      "status": "Overdue"
-    }
-  ],
-  "pending-fines": [
-    {
-      "title": "Database System Concepts",
-      "days": "7",
-      "amount": "Rs. 35",
-      "status": "Unpaid"
-    },
-    {
-      "note": "Fine rate: Rs. 5 per day after the 14-day loan period"
-    },
-    {
-      "note": "Fines must be cleared at the library counter before new books can be issued"
-    }
-  ],
-  "recent-activity": [
-    {
-      "date": "14 Jan 2025",
-      "action": "Issued",
-      "book": "Clean Code by Robert C. Martin",
-      "txn": "TXN-2025-0041"
-    },
-    {
-      "date": "12 Jan 2025",
-      "action": "Returned",
-      "book": "Operating System Concepts by Silberschatz",
-      "txn": "",
-      "note": "No fine incurred"
-    },
-    {
-      "date": "10 Jan 2025",
-      "action": "Issued",
-      "book": "Introduction to Algorithms by Cormen",
-      "txn": "TXN-2025-0038"
-    },
-    {
-      "date": "07 Jan 2025",
-      "action": "Returned",
-      "book": "Computer Networks by Tanenbaum",
-      "txn": "",
-      "note": "Returned on time"
-    },
-    {
-      "date": "03 Jan 2025",
-      "action": "Issued",
-      "book": "Database System Concepts by Silberschatz",
-      "txn": "TXN-2025-0031"
-    },
-    {
-      "date": "28 Dec 2024",
-      "action": "Fine Paid",
-      "book": "Software Engineering by Sommerville",
-      "txn": "",
-      "note": "Rs. 20 paid"
-    }
-  ],
   "books": {
-    "headerHeading": "Library Catalogue",
-    "headerBody": "Browse the full collection of books available at NCBA&E Central Library. Search by title, author, or ISBN — then filter by category or availability to find exactly what you need.",
-    "headerCta": "Request a Book",
-    "searchHeading": "Find Your Next Read",
-    "searchBody": "Use the search bar to look up any title, author name, or ISBN. Narrow results further with the filters below.",
-    "searchPlaceholder": "Enter title, author, or ISBN…",
-    "resultsHeading": "Search Results",
-    "resultsBody": "Each card shows real-time availability. Click a title to view full details, or hit 'Issue Book' to begin the checkout process.",
-    "issueCta": "Issue Book",
-    "waitlistCta": "Join Waitlist",
-    "paginationBody": "Showing page 1 of 13 — 312 titles match your current filters."
+    "heading": "Book Catalogue",
+    "subheading": "Browse and search the NCBA&E library collection.",
+    "searchPlaceholder": "Search by title, author, ISBN, or keyword...",
+    "filterCategory": "Category",
+    "filterAvailability": "Availability",
+    "available": "Available",
+    "unavailable": "Unavailable",
+    "allCategories": "All Categories",
+    "noResults": "No books found matching your search.",
+    "addToWishlist": "Add to Wishlist",
+    "viewDetails": "View Details"
   },
-  "header": [
-    {
-      "text": "Search across 4,800+ catalogued titles in real time"
-    },
-    {
-      "text": "Filter by genre, availability, shelf location, or publication year"
-    },
-    {
-      "text": "See live copy counts — know before you visit the desk"
-    },
-    {
-      "text": "Issue a book directly from the catalogue with one click"
-    }
-  ],
-  "search-filter": [
-    {
-      "label": "Search placeholder",
-      "value": "Enter title, author, or ISBN…"
-    },
-    {
-      "label": "Category filter",
-      "value": "All Categories | Computer Science | Mathematics | Physics | Literature | Islamic Studies | Business & Economics | Engineering | Social Sciences | Reference"
-    },
-    {
-      "label": "Availability filter",
-      "value": "All Books | Available Now | Currently Issued | Low Stock (1 copy left)"
-    },
-    {
-      "label": "Sort by",
-      "value": "Relevance | Title A–Z | Title Z–A | Newest Additions | Most Issued"
-    },
-    {
-      "label": "Active filter badge",
-      "value": "Computer Science · Available Now — × Clear filters"
-    },
-    {
-      "label": "Results count",
-      "value": "Showing 24 of 312 results in Computer Science"
-    }
-  ],
-  "book-grid": [
-    {
-      "title": "Introduction to Algorithms",
-      "author": "Thomas H. Cormen",
-      "isbn": "978-0262033848",
-      "category": "Computer Science",
-      "shelf": "CS-A12",
-      "available": 3,
-      "total": 5,
-      "badge": "Available"
-    },
-    {
-      "title": "Clean Code: A Handbook of Agile Software Craftsmanship",
-      "author": "Robert C. Martin",
-      "isbn": "978-0132350884",
-      "category": "Computer Science",
-      "shelf": "CS-B04",
-      "available": 1,
-      "total": 3,
-      "badge": "Low Stock"
-    },
-    {
-      "title": "Database System Concepts",
-      "author": "Abraham Silberschatz",
-      "isbn": "978-0078022159",
-      "category": "Computer Science",
-      "shelf": "CS-A08",
-      "available": 0,
-      "total": 4,
-      "badge": "Issued"
-    },
-    {
-      "title": "Calculus: Early Transcendentals",
-      "author": "James Stewart",
-      "isbn": "978-1285741550",
-      "category": "Mathematics",
-      "shelf": "MA-C02",
-      "available": 6,
-      "total": 6,
-      "badge": "Available"
-    },
-    {
-      "title": "Operating System Concepts",
-      "author": "Abraham Silberschatz & Greg Gagne",
-      "isbn": "978-1118063330",
-      "category": "Computer Science",
-      "shelf": "CS-A15",
-      "available": 2,
-      "total": 4,
-      "badge": "Available"
-    },
-    {
-      "title": "Principles of Economics",
-      "author": "N. Gregory Mankiw",
-      "isbn": "978-1305585126",
-      "category": "Business & Economics",
-      "shelf": "BE-D07",
-      "available": 4,
-      "total": 7,
-      "badge": "Available"
-    },
-    {
-      "title": "Computer Networks",
-      "author": "Andrew S. Tanenbaum",
-      "isbn": "978-0132126953",
-      "category": "Computer Science",
-      "shelf": "CS-B11",
-      "available": 0,
-      "total": 3,
-      "badge": "Issued"
-    },
-    {
-      "title": "Artificial Intelligence: A Modern Approach",
-      "author": "Stuart Russell & Peter Norvig",
-      "isbn": "978-0134610993",
-      "category": "Computer Science",
-      "shelf": "CS-C01",
-      "available": 1,
-      "total": 2,
-      "badge": "Low Stock"
-    },
-    {
-      "title": "Engineering Mathematics",
-      "author": "K.A. Stroud",
-      "isbn": "978-1137031204",
-      "category": "Engineering",
-      "shelf": "EN-E03",
-      "available": 5,
-      "total": 5,
-      "badge": "Available"
-    },
-    {
-      "title": "The Wealth of Nations",
-      "author": "Adam Smith",
-      "isbn": "978-0140432084",
-      "category": "Business & Economics",
-      "shelf": "BE-D02",
-      "available": 2,
-      "total": 2,
-      "badge": "Available"
-    },
-    {
-      "title": "Physics for Scientists and Engineers",
-      "author": "Raymond A. Serway",
-      "isbn": "978-1337553278",
-      "category": "Physics",
-      "shelf": "PH-F06",
-      "available": 3,
-      "total": 6,
-      "badge": "Available"
-    },
-    {
-      "title": "Design Patterns: Elements of Reusable Object-Oriented Software",
-      "author": "Gang of Four",
-      "isbn": "978-0201633610",
-      "category": "Computer Science",
-      "shelf": "CS-B09",
-      "available": 2,
-      "total": 3,
-      "badge": "Available"
-    }
-  ],
-  "pagination": [
-    {
-      "label": "Previous page",
-      "note": "disabled on page 1"
-    },
-    {
-      "label": "Page 1",
-      "note": "active / current"
-    },
-    {
-      "label": "Page 2",
-      "note": ""
-    },
-    {
-      "label": "Page 3",
-      "note": ""
-    },
-    {
-      "label": "…",
-      "note": "ellipsis"
-    },
-    {
-      "label": "Page 13",
-      "note": ""
-    },
-    {
-      "label": "Next page",
-      "note": "navigate to page 2"
-    },
-    {
-      "label": "Per-page selector",
-      "note": "12 | 24 | 48 results per page"
-    }
-  ],
+  "catalogue": {
+    "heading": "Explore the Collection",
+    "subheading": "Over 12,000 titles across all major academic disciplines.",
+    "books": "Featured Books",
+    "eyebrow": "Browse Our Collection",
+    "viewAll": "View All Books"
+  },
   "transactions": {
-    "headerHeading": "Issue & Return",
-    "headerBody": "Manage your active book loans, initiate new issues, and record returns — all in one place. Every transaction is logged automatically and your due dates are tracked in real time.",
-    "issueHeading": "Issue a Book",
-    "issueBody": "Enter the book's ISBN or title and your member ID to initiate a checkout. The standard loan period is 14 days from the issue date.",
-    "issueCta": "Confirm Issue",
-    "activeHeading": "Active Loans",
-    "activeBody": "All books currently checked out under your account are listed below. Loans highlighted in amber are due within 3 days; those in red are overdue.",
-    "activeCta": "Return Selected",
-    "historyHeading": "Return History",
-    "historyBody": "A complete log of all past returns associated with your account. Transactions that incurred overdue fines are linked to your Fine Management page.",
-    "historyCta": "View Fine Details"
+    "heading": "My Transactions",
+    "subheading": "A complete record of your book borrowings and returns.",
+    "issueDate": "Issue Date",
+    "dueDate": "Due Date",
+    "returnDate": "Return Date",
+    "status": "Status",
+    "book": "Book",
+    "noTransactions": "No transactions found."
   },
-  "active-transactions": [
-    {
-      "txn": "TXN-2024-0041",
-      "title": "Introduction to Algorithms",
-      "author": "Cormen et al.",
-      "issued": "01 Jun 2025",
-      "due": "15 Jun 2025",
-      "status": "Active"
-    },
-    {
-      "txn": "TXN-2024-0038",
-      "title": "Database System Concepts",
-      "author": "Silberschatz",
-      "issued": "28 May 2025",
-      "due": "11 Jun 2025",
-      "status": "Due Soon"
-    },
-    {
-      "txn": "TXN-2024-0035",
-      "title": "Clean Code",
-      "author": "Robert C. Martin",
-      "issued": "20 May 2025",
-      "due": "03 Jun 2025",
-      "status": "Overdue"
-    }
-  ],
-  "return-history": [
-    {
-      "txn": "TXN-2024-0029",
-      "title": "Operating System Concepts",
-      "author": "Silberschatz",
-      "issued": "01 Apr 2025",
-      "returned": "14 Apr 2025",
-      "fine": "Rs. 0",
-      "status": "Returned on time"
-    },
-    {
-      "txn": "TXN-2024-0022",
-      "title": "Computer Networks",
-      "author": "Tanenbaum",
-      "issued": "10 Mar 2025",
-      "returned": "28 Mar 2025",
-      "fine": "Rs. 0",
-      "status": "Returned on time"
-    },
-    {
-      "txn": "TXN-2024-0018",
-      "title": "Artificial Intelligence: A Modern Approach",
-      "author": "Russell & Norvig",
-      "issued": "15 Feb 2025",
-      "returned": "05 Mar 2025",
-      "fine": "Rs. 45",
-      "status": "Returned late — fine paid"
-    },
-    {
-      "txn": "TXN-2024-0011",
-      "title": "Software Engineering",
-      "author": "Ian Sommerville",
-      "issued": "02 Jan 2025",
-      "returned": "20 Jan 2025",
-      "fine": "Rs. 0",
-      "status": "Returned on time"
-    },
-    {
-      "txn": "TXN-2024-0007",
-      "title": "Discrete Mathematics",
-      "author": "Kenneth Rosen",
-      "issued": "10 Dec 2024",
-      "returned": "28 Dec 2024",
-      "fine": "Rs. 0",
-      "status": "Returned on time"
-    }
-  ],
   "fines": {
-    "headerHeading": "Fine Management",
-    "headerBody": "View and track your overdue fines, payment status, and fine calculation details. All fines are calculated at Rs. 5 per day after the 14-day standard loan period.",
-    "summaryHeading": "Fine Summary",
-    "totalLabel": "Total Fines",
-    "paidLabel": "Paid",
-    "pendingLabel": "Pending",
-    "waivedLabel": "Waived",
-    "tableHeading": "Fine Records",
-    "policyHeading": "Fine Policy",
-    "policyBody": "Overdue fines are calculated at Rs. 5 per day for each book returned after the 14-day standard loan period. Fines must be cleared at the library counter before new books can be issued. For fine waivers or disputes, contact the librarian at helpdesk@ncbae.edu.pk or visit the circulation desk."
+    "heading": "My Fines",
+    "subheading": "View and track your outstanding library fines.",
+    "totalFines": "Total Fines",
+    "paidFines": "Paid",
+    "pendingFines": "Pending",
+    "waivedFines": "Waived",
+    "noFines": "No fines on record. Keep returning books on time!",
+    "paymentPolicy": "Payment Policy",
+    "policyDetail": "Fines are charged at Rs. 5 per day after the 14-day loan period expires."
   },
   "admin": {
-    "dashboardHeading": "Admin Dashboard",
-    "dashboardBody": "Library activity overview for NCBA&E Central Library. Monitor key metrics, recent transactions, and manage library resources.",
-    "booksHeading": "Book Management",
-    "booksBody": "Add, edit, delete, and manage the library's book inventory.",
-    "addBookCta": "Add New Book",
-    "usersHeading": "User Management",
-    "usersBody": "View, add, edit, and deactivate library members with role and status controls.",
-    "addUserCta": "Add New User",
-    "transactionsHeading": "Transaction Management",
-    "transactionsBody": "Oversee all issue/return transactions and manage transaction records.",
-    "finesHeading": "Fine Management",
-    "finesBody": "Monitor overdue fines, fine calculations, and payment status across all users."
+    "heading": "Admin Dashboard",
+    "subheading": "Library system overview and management controls.",
+    "totalBooks": "Total Books",
+    "totalMembers": "Total Members",
+    "activeIssues": "Active Issues",
+    "overdueItems": "Overdue Items",
+    "finesCollected": "Fines Collected",
+    "newRegistrations": "New Registrations",
+    "recentTransactions": "Recent Transactions",
+    "quickLinks": "Quick Links",
+    "manageBooks": "Manage Books",
+    "manageUsers": "Manage Users",
+    "manageTransactions": "Manage Transactions",
+    "manageFines": "Manage Fines"
   },
   "adminCta": {
-    "cta1": "Start Managing",
+    "heading": "Ready to manage your library?",
+    "subheading": "Access the full admin panel to manage books, members, and transactions.",
+    "cta": "Go to Admin Panel",
+    "cta1": "Go to Admin Dashboard",
     "cta2": "Learn More",
     "eyebrow": "For Librarians",
     "feat1": "Real-time inventory tracking",
-    "feat2": "Member & circulation management",
-    "feat3": "Advanced reporting & analytics",
-    "heading": "Powerful Admin Tools",
-    "subhead": "Streamline library operations with intuitive controls built for modern librarians."
-  },
-  "catalogue": {
-    "books": "Books in Catalogue",
-    "eyebrow": "Discover",
-    "heading": "Browse Our Collection",
-    "viewAll": "View All Books"
+    "feat2": "Automated fine calculations",
+    "feat3": "Member activity insights",
+    "subhead": "Powerful tools to manage your library operations efficiently."
   },
   "features": {
-    "eyebrow": "Why Choose LMS",
-    "heading": "Built for Libraries",
-    "subhead": "A complete digital solution designed to simplify library management."
+    "heading": "Everything You Need",
+    "subheading": "A complete library management solution built for academic institutions.",
+    "eyebrow": "Why Choose Us",
+    "subhead": "Streamlined library management for modern institutions."
   },
   "howItWorks": {
-    "cta": "Explore Features",
-    "eyebrow": "Getting Started",
     "heading": "How It Works",
-    "subhead": "Three simple steps to transform your library workflow."
+    "subheading": "Get started in three simple steps.",
+    "cta": "Get Started",
+    "eyebrow": "How It Works",
+    "subhead": "Simple steps to manage your library and track fines."
   },
   "institution": {
-    "link1": "NCBA&E",
-    "link2": "Computer Science Department",
-    "tagline": "Final Year Project — National College of Business Administration & Economics, Lahore"
+    "heading": "Built for NCBA&E",
+    "subheading": "Designed specifically for the National College of Business Administration & Economics, Lahore.",
+    "link1": "For Members",
+    "link2": "For Admins",
+    "tagline": "Your complete library management solution."
   },
   "testimonials": {
-    "eyebrow": "From the Team",
-    "heading": "Built by Students, Trusted by Libraries"
+    "heading": "What Members Say",
+    "subheading": "Feedback from students, faculty, and staff.",
+    "eyebrow": "What Members Say"
+  },
+  "about": {
+    "heading": "About & Help",
+    "subheading": "Learn about the NCBA&E Central Library, our borrowing policies, and get answers to common questions."
   }
 }

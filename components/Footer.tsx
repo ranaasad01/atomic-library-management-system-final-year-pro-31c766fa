@@ -32,6 +32,7 @@ export default function Footer() {
     { label: t("footer.books"), href: "/books" },
     { label: t("footer.transactions"), href: "/transactions" },
     { label: t("footer.fines"), href: "/fines" },
+    { label: "About & Help", href: "/about" },
   ];
 
   const adminLinks = [
@@ -117,16 +118,8 @@ export default function Footer() {
                   <Link
                     href={getLinkHref(link.href)}
                     onClick={(e) => handleAnchorClick(e, link.href)}
-                    className="text-xs transition-colors"
+                    className="text-xs transition-colors hover:opacity-100"
                     style={{ color: "rgba(245,240,232,0.65)" }}
-                    onMouseEnter={(e) => {
-                      (e.currentTarget as HTMLElement).style.color =
-                        "var(--card)";
-                    }}
-                    onMouseLeave={(e) => {
-                      (e.currentTarget as HTMLElement).style.color =
-                        "rgba(245,240,232,0.65)";
-                    }}
                   >
                     {link.label}
                   </Link>
@@ -149,16 +142,8 @@ export default function Footer() {
                   <Link
                     href={getLinkHref(link.href)}
                     onClick={(e) => handleAnchorClick(e, link.href)}
-                    className="text-xs transition-colors"
+                    className="text-xs transition-colors hover:opacity-100"
                     style={{ color: "rgba(245,240,232,0.65)" }}
-                    onMouseEnter={(e) => {
-                      (e.currentTarget as HTMLElement).style.color =
-                        "var(--card)";
-                    }}
-                    onMouseLeave={(e) => {
-                      (e.currentTarget as HTMLElement).style.color =
-                        "rgba(245,240,232,0.65)";
-                    }}
                   >
                     {link.label}
                   </Link>
@@ -167,7 +152,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Policy */}
+          {/* Library Policy */}
           <div>
             <h3
               className="text-xs font-semibold uppercase tracking-wider mb-3"
@@ -198,19 +183,20 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Bottom bar */}
         <div
           className="mt-8 pt-6 border-t flex flex-col sm:flex-row items-center justify-between gap-3"
           style={{ borderColor: "rgba(200,169,110,0.15)" }}
         >
           <p
             className="text-xs"
-            style={{ color: "rgba(245,240,232,0.45)" }}
+            style={{ color: "rgba(245,240,232,0.4)" }}
           >
             {t("footer.copyright")}
           </p>
           <p
             className="text-xs"
-            style={{ color: "rgba(245,240,232,0.45)" }}
+            style={{ color: "rgba(200,169,110,0.6)" }}
           >
             {t("footer.fyp")}
           </p>

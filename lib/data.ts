@@ -26,6 +26,7 @@ export const navLinks: NavLink[] = [
   { label: "Transactions", href: "/transactions", key: "transactions", userOnly: true },
   { label: "My Fines", href: "/fines", key: "fines", userOnly: true },
   { label: "Admin Panel", href: "/admin", key: "admin", adminOnly: true },
+  { label: "About & Help", href: "/about", key: "about" },
 ];
 
 export const adminNavLinks: NavLink[] = [

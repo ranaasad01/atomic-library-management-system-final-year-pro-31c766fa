@@ -9,7 +9,8 @@
     "adminBooks": "Gestionar Libros",
     "adminUsers": "Gestionar Usuarios",
     "adminTransactions": "Todas las Transacciones",
-    "adminFines": "Gestión de Multas"
+    "adminFines": "Gestión de Multas",
+    "about": "Acerca de y Ayuda"
   },
   "footer": {
     "tagline": "Tu puerta al conocimiento — Sistema de Gestión de la Biblioteca Central NCBA&E, Proyecto de Último Año.",
@@ -28,7 +29,8 @@
     "fineRate": "Multa por retraso: Rs. 5 por día",
     "maxBooks": "Máximo 5 libros por miembro",
     "copyright": "© 2025 Biblioteca Central NCBA&E. Todos los derechos reservados.",
-    "fyp": "Sistema de Gestión de la Biblioteca — NCBA&E FYP"
+    "fyp": "Sistema de Gestión de la Biblioteca — NCBA&E FYP",
+    "about": "Acerca de y Ayuda"
   },
   "auth": {
     "heroHeading": "Biblioteca Central NCBA&E",
@@ -45,18 +47,18 @@
     "emailPlaceholder": "p. ej. s2021-bcs-045@ncbae.edu.pk",
     "passwordLabel": "Contraseña",
     "passwordPlaceholder": "Mínimo 8 caracteres",
-    "rememberMe": "Recuérdame por 7 días",
+    "rememberMe": "Recuérdame durante 7 días",
     "fullNameLabel": "Nombre Completo",
-    "fullNamePlaceholder": "Como aparece en tu CNIC o carnet de estudiante",
+    "fullNamePlaceholder": "Como aparece en tu CNIC o carné de estudiante",
     "memberIdLabel": "ID de Miembro",
-    "memberIdPlaceholder": "Número de matrícula o ID de empleado de la facultad",
+    "memberIdPlaceholder": "Número de matrícula o ID de empleado",
     "phoneLabel": "Número de Teléfono",
     "phonePlaceholder": "Opcional — para notificaciones de retrasos",
     "confirmPasswordLabel": "Confirmar Contraseña",
     "confirmPasswordPlaceholder": "Debe coincidir con la contraseña anterior",
-    "footerBody": "Sistema de Gestión de Biblioteca — Proyecto de Último Año de NCBA&E. Para soporte, contacta a library@ncbae.edu.pk o visita el mostrador de circulación (lun–sáb, 8 AM – 6 PM).",
+    "footerBody": "Sistema de Gestión de Biblioteca — Proyecto Final de NCBA&E. Para soporte, contacta a library@ncbae.edu.pk o visita el mostrador de circulación (lun–sáb, 8 AM – 6 PM).",
     "privacyPolicy": "Política de Privacidad",
-    "libraryRules": "Reglas y Regulaciones de la Biblioteca",
+    "libraryRules": "Normas y Regulaciones de la Biblioteca",
     "contactLibrarian": "Contactar al Bibliotecario"
   },
   "hero": {
@@ -67,115 +69,117 @@
     "cta2": "Ver Demo",
     "eyebrow": "Sistema de Gestión de Biblioteca",
     "headline1": "Moderniza Tu Biblioteca",
-    "headline2": "Gestión de libros sin esfuerzo, seguimiento de miembros y circulación — todo en una plataforma.",
+    "headline2": "Gestión de libros sin esfuerzo, seguimiento de miembros y circulación—todo en una plataforma.",
     "subhead": "Una solución basada en web construida con React, Node.js, Express y MongoDB para operaciones de biblioteca sin interrupciones."
   },
   "dashboard": {
-    "headerHeading": "Bienvenido de nuevo, Ahmed.",
-    "headerBody": "Aquí hay una instantánea de tu actividad de biblioteca en la Biblioteca Central de NCBA&E. Realiza un seguimiento de tus libros emitidos, multas pendientes y transacciones recientes — todo en un solo lugar.",
-    "headerCta": "Explorar Libros Nuevos",
-    "statsHeading": "Tu Biblioteca de un Vistazo",
-    "statsBody": "Métricas clave de tu período de membresía actual, actualizadas en tiempo real.",
-    "issuedHeading": "Libros Actualmente Emitidos",
-    "issuedBody": "Tienes 3 libros prestados. Devuélvelos en o antes de su fecha de vencimiento para evitar multas por retraso (Rs. 5 por día después del período de préstamo de 14 días).",
-    "issuedCta": "Ver Todas las Transacciones",
-    "finesHeading": "Multas Pendientes",
-    "finesBody": "Tienes una multa pendiente de Rs. 35 por la devolución atrasada de Database System Concepts (7 días de retraso a Rs. 5/día). Por favor, visita el mostrador de la biblioteca o consulta la página de Multas para más detalles.",
-    "finesCta": "Ver Detalles de Multa",
-    "activityHeading": "Actividad Reciente",
-    "activityBody": "Un registro de tus transacciones más recientes e interacciones con la biblioteca.",
-    "activityCta": "Ver Historial Completo",
-    "ctaHeading": "¿Listo para Encontrar Tu Próximo Libro?",
-    "ctaBody": "Explora el catálogo de la Biblioteca Central de NCBA&E — busca por título, autor, ISBN o categoría y verifica la disponibilidad en tiempo real antes de dirigirte al estante.",
-    "ctaButton": "Buscar en el Catálogo"
+    "heading": "Mi Panel de Biblioteca",
+    "subheading": "Realiza un seguimiento de tus libros prestados, fechas de vencimiento y multas pendientes de un vistazo.",
+    "activeLoans": "Préstamos Activos",
+    "overdueItems": "Artículos Vencidos",
+    "totalBorrowed": "Total Prestado",
+    "pendingFines": "Multas Pendientes",
+    "recentActivity": "Actividad Reciente",
+    "noActivity": "No se encontró actividad reciente.",
+    "viewAll": "Ver Todo"
   },
   "books": {
-    "headerHeading": "Catálogo de Biblioteca",
-    "headerBody": "Explora la colección completa de libros disponibles en la Biblioteca Central de NCBA&E. Busca por título, autor o ISBN — luego filtra por categoría o disponibilidad para encontrar exactamente lo que necesitas.",
-    "headerCta": "Solicitar un Libro",
-    "searchHeading": "Encuentra Tu Próxima Lectura",
-    "searchBody": "Usa la barra de búsqueda para buscar cualquier título, nombre de autor o ISBN. Reduce los resultados aún más con los filtros a continuación.",
-    "searchPlaceholder": "Ingresa título, autor o ISBN…",
-    "resultsHeading": "Resultados de Búsqueda",
-    "resultsBody": "Cada tarjeta muestra disponibilidad en tiempo real. Haz clic en un título para ver detalles completos, o presiona 'Emitir Libro' para comenzar el proceso de préstamo.",
-    "issueCta": "Emitir Libro",
-    "waitlistCta": "Unirse a la Lista de Espera",
-    "paginationBody": "Mostrando página 1 de 13 — 312 títulos coinciden con tus filtros actuales."
+    "heading": "Catálogo de Libros",
+    "subheading": "Explora y busca en la colección de la biblioteca NCBA&E.",
+    "searchPlaceholder": "Busca por título, autor, ISBN o palabra clave...",
+    "filterCategory": "Categoría",
+    "filterAvailability": "Disponibilidad",
+    "available": "Disponible",
+    "unavailable": "No disponible",
+    "allCategories": "Todas las categorías",
+    "noResults": "No se encontraron libros que coincidan con tu búsqueda.",
+    "addToWishlist": "Agregar a la lista de deseos",
+    "viewDetails": "Ver detalles"
+  },
+  "catalogue": {
+    "heading": "Explora la colección",
+    "subheading": "Más de 12,000 títulos en todas las disciplinas académicas principales.",
+    "books": "Libros destacados",
+    "eyebrow": "Explora nuestra colección",
+    "viewAll": "Ver todos los libros"
   },
   "transactions": {
-    "headerHeading": "Emisión y Devolución",
-    "headerBody": "Gestiona tus préstamos activos, inicia nuevas emisiones y registra devoluciones — todo en un solo lugar. Cada transacción se registra automáticamente y tus fechas de vencimiento se rastrean en tiempo real.",
-    "issueHeading": "Emitir un Libro",
-    "issueBody": "Ingresa el ISBN o título del libro y tu ID de miembro para iniciar un préstamo. El período de préstamo estándar es de 14 días a partir de la fecha de emisión.",
-    "issueCta": "Confirmar Emisión",
-    "activeHeading": "Préstamos Activos",
-    "activeBody": "Todos los libros actualmente prestados bajo tu cuenta se enumeran a continuación. Los préstamos resaltados en ámbar vencen dentro de 3 días; los de color rojo están vencidos.",
-    "activeCta": "Devolver Seleccionados",
-    "historyHeading": "Historial de Devoluciones",
-    "historyBody": "Un registro completo de todas las devoluciones anteriores asociadas con tu cuenta. Las transacciones que incurrieron en multas por retraso están vinculadas a tu página de Gestión de Multas.",
-    "historyCta": "Ver Detalles de Multas"
+    "heading": "Mis transacciones",
+    "subheading": "Un registro completo de tus préstamos y devoluciones de libros.",
+    "issueDate": "Fecha de emisión",
+    "dueDate": "Fecha de vencimiento",
+    "returnDate": "Fecha de devolución",
+    "status": "Estado",
+    "book": "Libro",
+    "noTransactions": "No se encontraron transacciones."
   },
   "fines": {
-    "headerHeading": "Gestión de Multas",
-    "headerBody": "Ve y rastrea tus multas por retraso, estado de pago y detalles de cálculo de multas. Todas las multas se calculan a Rs. 5 por día después del período de préstamo estándar de 14 días.",
-    "summaryHeading": "Resumen de Multas",
-    "totalLabel": "Multas Totales",
-    "paidLabel": "Pagado",
-    "pendingLabel": "Pendiente",
-    "waivedLabel": "Condonado",
-    "tableHeading": "Registros de Multas",
-    "policyHeading": "Política de Multas",
-    "policyBody": "Las multas por retraso se calculan a Rs. 5 por día por cada libro devuelto después del período de préstamo estándar de 14 días. Las multas deben liquidarse en el mostrador de la biblioteca antes de que se puedan emitir nuevos libros. Para condonaciones de multas o disputas, contacta al bibliotecario en helpdesk@ncbae.edu.pk o visita el mostrador de circulación."
+    "heading": "Mis multas",
+    "subheading": "Visualiza y realiza un seguimiento de tus multas de biblioteca pendientes.",
+    "totalFines": "Multas totales",
+    "paidFines": "Pagadas",
+    "pendingFines": "Pendientes",
+    "waivedFines": "Condonadas",
+    "noFines": "Sin multas registradas. ¡Sigue devolviendo los libros a tiempo!",
+    "paymentPolicy": "Política de pago",
+    "policyDetail": "Se cobran multas de Rs. 5 por día después de que vence el período de préstamo de 14 días."
   },
   "admin": {
-    "dashboardHeading": "Panel de Administración",
-    "dashboardBody": "Descripción general de la actividad de la biblioteca para la Biblioteca Central de NCBA&E. Monitorea métricas clave, transacciones recientes y gestiona recursos de la biblioteca.",
-    "booksHeading": "Gestión de Libros",
-    "booksBody": "Añade, edita, elimina y gestiona el inventario de libros de la biblioteca.",
-    "addBookCta": "Añadir Nuevo Libro",
-    "usersHeading": "Gestión de Usuarios",
-    "usersBody": "Ve, añade, edita y desactiva miembros de la biblioteca con controles de rol y estado.",
-    "addUserCta": "Añadir Nuevo Usuario",
-    "transactionsHeading": "Gestión de Transacciones",
-    "transactionsBody": "Supervisa todas las transacciones de préstamo/devolución y gestiona los registros de transacciones.",
-    "finesHeading": "Gestión de Multas",
-    "finesBody": "Monitorea multas por retraso, cálculos de multas y estado de pago de todos los usuarios."
+    "heading": "Panel de administración",
+    "subheading": "Descripción general del sistema de biblioteca y controles de gestión.",
+    "totalBooks": "Total de libros",
+    "totalMembers": "Total de miembros",
+    "activeIssues": "Préstamos activos",
+    "overdueItems": "Artículos vencidos",
+    "finesCollected": "Multas recaudadas",
+    "newRegistrations": "Nuevos registros",
+    "recentTransactions": "Transacciones recientes",
+    "quickLinks": "Enlaces rápidos",
+    "manageBooks": "Gestionar libros",
+    "manageUsers": "Gestionar usuarios",
+    "manageTransactions": "Gestionar transacciones",
+    "manageFines": "Gestionar Multas"
   },
   "adminCta": {
-    "cta1": "Comenzar a Gestionar",
+    "heading": "¿Listo para gestionar tu biblioteca?",
+    "subheading": "Accede al panel de administración completo para gestionar libros, miembros y transacciones.",
+    "cta": "Ir al Panel de Administración",
+    "cta1": "Ir al Panel de Control de Administración",
     "cta2": "Más Información",
     "eyebrow": "Para Bibliotecarios",
     "feat1": "Seguimiento de inventario en tiempo real",
-    "feat2": "Gestión de miembros y circulación",
-    "feat3": "Reportes y análisis avanzados",
-    "heading": "Herramientas Admin Potentes",
-    "subhead": "Optimiza las operaciones de tu biblioteca con controles intuitivos diseñados para bibliotecarios modernos."
-  },
-  "catalogue": {
-    "books": "Libros en el Catálogo",
-    "eyebrow": "Descubre",
-    "heading": "Explora Nuestra Colección",
-    "viewAll": "Ver Todos los Libros"
+    "feat2": "Cálculo automático de multas",
+    "feat3": "Información sobre actividad de miembros",
+    "subhead": "Herramientas poderosas para gestionar las operaciones de tu biblioteca de manera eficiente."
   },
   "features": {
-    "eyebrow": "Por Qué Elegir LMS",
-    "heading": "Diseñado para Bibliotecas",
-    "subhead": "Una solución digital completa diseñada para simplificar la gestión de bibliotecas."
+    "heading": "Todo lo que Necesitas",
+    "subheading": "Una solución completa de gestión de bibliotecas diseñada para instituciones académicas.",
+    "eyebrow": "Por Qué Elegirnos",
+    "subhead": "Gestión de bibliotecas simplificada para instituciones modernas."
   },
   "howItWorks": {
-    "cta": "Explorar Funciones",
-    "eyebrow": "Primeros Pasos",
     "heading": "Cómo Funciona",
-    "subhead": "Tres pasos simples para transformar el flujo de trabajo de tu biblioteca."
+    "subheading": "Comienza en tres pasos simples.",
+    "cta": "Comenzar",
+    "eyebrow": "Cómo Funciona",
+    "subhead": "Pasos simples para gestionar tu biblioteca y rastrear multas."
   },
   "institution": {
-    "link1": "NCBA&E",
-    "link2": "Departamento de Ciencias de la Computación",
-    "tagline": "Proyecto de Último Año — National College of Business Administration & Economics, Lahore"
+    "heading": "Diseñado para NCBA&E",
+    "subheading": "Diseñado específicamente para el National College of Business Administration & Economics, Lahore.",
+    "link1": "Para Miembros",
+    "link2": "Para Administradores",
+    "tagline": "Tu solución completa de gestión de bibliotecas."
   },
   "testimonials": {
-    "eyebrow": "Del Equipo",
-    "heading": "Creado por Estudiantes, Confiado por Bibliotecas"
+    "heading": "Lo Que Dicen los Miembros",
+    "subheading": "Comentarios de estudiantes, profesores y personal.",
+    "eyebrow": "Lo Que Dicen los Miembros"
+  },
+  "about": {
+    "heading": "Acerca de y Ayuda",
+    "subheading": "Obtén información sobre la Biblioteca Central de NCBA&E, nuestras políticas de préstamo y respuestas a preguntas frecuentes."
   },
   "auth-tabs": [
     {
@@ -203,429 +207,20 @@
       "hint": "keep your session active on trusted devices for up to 7 days"
     },
     {
-      "field": "Sign In",
-      "hint": "authenticates via JWT and redirects to your personalised dashboard"
+      "field": "Student / Member ID",
+      "hint": "your roll number (students) or employee ID (faculty/staff)"
     },
     {
       "field": "Full Name",
-      "hint": "as it appears on your CNIC or student card"
-    },
-    {
-      "field": "Member ID",
-      "hint": "your student roll number or faculty employee ID"
-    },
-    {
-      "field": "Email Address",
-      "hint": "use your institutional email for faster verification"
+      "hint": "enter your name exactly as it appears on your student card or CNIC"
     },
     {
       "field": "Phone Number",
-      "hint": "optional; used for overdue notifications"
-    },
-    {
-      "field": "Password",
-      "hint": "at least 8 characters, one uppercase letter, and one number"
+      "hint": "optional — used only for overdue return notifications"
     },
     {
       "field": "Confirm Password",
-      "hint": "must match the password entered above"
-    },
-    {
-      "field": "Create Account",
-      "hint": "submits your registration for librarian approval"
-    }
-  ],
-  "footer-link": [
-    {
-      "label": "Privacy Policy",
-      "description": "how we store and protect your member data"
-    },
-    {
-      "label": "Library Rules & Regulations",
-      "description": "borrowing limits, loan periods, and fine policy"
-    },
-    {
-      "label": "Contact the Librarian",
-      "description": "helpdesk@ncbae.edu.pk | Ext. 204"
-    }
-  ],
-  "stats-overview": [
-    {
-      "label": "Books Currently Issued",
-      "value": "3",
-      "detail": "active loans out of your 5-book limit"
-    },
-    {
-      "label": "Due This Week",
-      "value": "2",
-      "detail": "books must be returned by Friday, 24 Jan 2025"
-    },
-    {
-      "label": "Overdue Books",
-      "value": "1",
-      "detail": "book is past its due date; a fine is accruing"
-    },
-    {
-      "label": "Pending Fines",
-      "value": "Rs. 35",
-      "detail": "outstanding across 1 overdue transaction"
-    },
-    {
-      "label": "Books Returned (This Month)",
-      "value": "4",
-      "detail": "books successfully returned in January"
-    },
-    {
-      "label": "Total Transactions (All Time)",
-      "value": "27",
-      "detail": "issue/return records on your account"
-    }
-  ],
-  "issued-books": [
-    {
-      "title": "Introduction to Algorithms",
-      "author": "Thomas H. Cormen",
-      "issued": "10 Jan 2025",
-      "due": "24 Jan 2025",
-      "status": "Due Soon"
-    },
-    {
-      "title": "Clean Code: A Handbook of Agile Software Craftsmanship",
-      "author": "Robert C. Martin",
-      "issued": "14 Jan 2025",
-      "due": "28 Jan 2025",
-      "status": "On Time"
-    },
-    {
-      "title": "Database System Concepts",
-      "author": "Abraham Silberschatz",
-      "issued": "03 Jan 2025",
-      "due": "17 Jan 2025",
-      "status": "Overdue"
-    }
-  ],
-  "pending-fines": [
-    {
-      "title": "Database System Concepts",
-      "days": "7",
-      "amount": "Rs. 35",
-      "status": "Unpaid"
-    },
-    {
-      "note": "Fine rate: Rs. 5 per day after the 14-day loan period"
-    },
-    {
-      "note": "Fines must be cleared at the library counter before new books can be issued"
-    }
-  ],
-  "recent-activity": [
-    {
-      "date": "14 Jan 2025",
-      "action": "Issued",
-      "book": "Clean Code by Robert C. Martin",
-      "txn": "TXN-2025-0041"
-    },
-    {
-      "date": "12 Jan 2025",
-      "action": "Returned",
-      "book": "Operating System Concepts by Silberschatz",
-      "txn": "",
-      "note": "No fine incurred"
-    },
-    {
-      "date": "10 Jan 2025",
-      "action": "Issued",
-      "book": "Introduction to Algorithms by Cormen",
-      "txn": "TXN-2025-0038"
-    },
-    {
-      "date": "07 Jan 2025",
-      "action": "Returned",
-      "book": "Computer Networks by Tanenbaum",
-      "txn": "",
-      "note": "Returned on time"
-    },
-    {
-      "date": "03 Jan 2025",
-      "action": "Issued",
-      "book": "Database System Concepts by Silberschatz",
-      "txn": "TXN-2025-0031"
-    },
-    {
-      "date": "28 Dec 2024",
-      "action": "Fine Paid",
-      "book": "Software Engineering by Sommerville",
-      "txn": "",
-      "note": "Rs. 20 paid"
-    }
-  ],
-  "header": [
-    {
-      "text": "Search across 4,800+ catalogued titles in real time"
-    },
-    {
-      "text": "Filter by genre, availability, shelf location, or publication year"
-    },
-    {
-      "text": "See live copy counts — know before you visit the desk"
-    },
-    {
-      "text": "Issue a book directly from the catalogue with one click"
-    }
-  ],
-  "search-filter": [
-    {
-      "label": "Search placeholder",
-      "value": "Enter title, author, or ISBN…"
-    },
-    {
-      "label": "Category filter",
-      "value": "All Categories | Computer Science | Mathematics | Physics | Literature | Islamic Studies | Business & Economics | Engineering | Social Sciences | Reference"
-    },
-    {
-      "label": "Availability filter",
-      "value": "All Books | Available Now | Currently Issued | Low Stock (1 copy left)"
-    },
-    {
-      "label": "Sort by",
-      "value": "Relevance | Title A–Z | Title Z–A | Newest Additions | Most Issued"
-    },
-    {
-      "label": "Active filter badge",
-      "value": "Computer Science · Available Now — × Clear filters"
-    },
-    {
-      "label": "Results count",
-      "value": "Showing 24 of 312 results in Computer Science"
-    }
-  ],
-  "book-grid": [
-    {
-      "title": "Introduction to Algorithms",
-      "author": "Thomas H. Cormen",
-      "isbn": "978-0262033848",
-      "category": "Computer Science",
-      "shelf": "CS-A12",
-      "available": 3,
-      "total": 5,
-      "badge": "Available"
-    },
-    {
-      "title": "Clean Code: A Handbook of Agile Software Craftsmanship",
-      "author": "Robert C. Martin",
-      "isbn": "978-0132350884",
-      "category": "Computer Science",
-      "shelf": "CS-B04",
-      "available": 1,
-      "total": 3,
-      "badge": "Low Stock"
-    },
-    {
-      "title": "Database System Concepts",
-      "author": "Abraham Silberschatz",
-      "isbn": "978-0078022159",
-      "category": "Computer Science",
-      "shelf": "CS-A08",
-      "available": 0,
-      "total": 4,
-      "badge": "Issued"
-    },
-    {
-      "title": "Calculus: Early Transcendentals",
-      "author": "James Stewart",
-      "isbn": "978-1285741550",
-      "category": "Mathematics",
-      "shelf": "MA-C02",
-      "available": 6,
-      "total": 6,
-      "badge": "Available"
-    },
-    {
-      "title": "Operating System Concepts",
-      "author": "Abraham Silberschatz & Greg Gagne",
-      "isbn": "978-1118063330",
-      "category": "Computer Science",
-      "shelf": "CS-A15",
-      "available": 2,
-      "total": 4,
-      "badge": "Available"
-    },
-    {
-      "title": "Principles of Economics",
-      "author": "N. Gregory Mankiw",
-      "isbn": "978-1305585126",
-      "category": "Business & Economics",
-      "shelf": "BE-D07",
-      "available": 4,
-      "total": 7,
-      "badge": "Available"
-    },
-    {
-      "title": "Computer Networks",
-      "author": "Andrew S. Tanenbaum",
-      "isbn": "978-0132126953",
-      "category": "Computer Science",
-      "shelf": "CS-B11",
-      "available": 0,
-      "total": 3,
-      "badge": "Issued"
-    },
-    {
-      "title": "Artificial Intelligence: A Modern Approach",
-      "author": "Stuart Russell & Peter Norvig",
-      "isbn": "978-0134610993",
-      "category": "Computer Science",
-      "shelf": "CS-C01",
-      "available": 1,
-      "total": 2,
-      "badge": "Low Stock"
-    },
-    {
-      "title": "Engineering Mathematics",
-      "author": "K.A. Stroud",
-      "isbn": "978-1137031204",
-      "category": "Engineering",
-      "shelf": "EN-E03",
-      "available": 5,
-      "total": 5,
-      "badge": "Available"
-    },
-    {
-      "title": "The Wealth of Nations",
-      "author": "Adam Smith",
-      "isbn": "978-0140432084",
-      "category": "Business & Economics",
-      "shelf": "BE-D02",
-      "available": 2,
-      "total": 2,
-      "badge": "Available"
-    },
-    {
-      "title": "Physics for Scientists and Engineers",
-      "author": "Raymond A. Serway",
-      "isbn": "978-1337553278",
-      "category": "Physics",
-      "shelf": "PH-F06",
-      "available": 3,
-      "total": 6,
-      "badge": "Available"
-    },
-    {
-      "title": "Design Patterns: Elements of Reusable Object-Oriented Software",
-      "author": "Gang of Four",
-      "isbn": "978-0201633610",
-      "category": "Computer Science",
-      "shelf": "CS-B09",
-      "available": 2,
-      "total": 3,
-      "badge": "Available"
-    }
-  ],
-  "pagination": [
-    {
-      "label": "Previous page",
-      "note": "disabled on page 1"
-    },
-    {
-      "label": "Page 1",
-      "note": "active / current"
-    },
-    {
-      "label": "Page 2",
-      "note": ""
-    },
-    {
-      "label": "Page 3",
-      "note": ""
-    },
-    {
-      "label": "…",
-      "note": "ellipsis"
-    },
-    {
-      "label": "Page 13",
-      "note": ""
-    },
-    {
-      "label": "Next page",
-      "note": "navigate to page 2"
-    },
-    {
-      "label": "Per-page selector",
-      "note": "12 | 24 | 48 results per page"
-    }
-  ],
-  "active-transactions": [
-    {
-      "txn": "TXN-2024-0041",
-      "title": "Introduction to Algorithms",
-      "author": "Cormen et al.",
-      "issued": "01 Jun 2025",
-      "due": "15 Jun 2025",
-      "status": "Active"
-    },
-    {
-      "txn": "TXN-2024-0038",
-      "title": "Database System Concepts",
-      "author": "Silberschatz",
-      "issued": "28 May 2025",
-      "due": "11 Jun 2025",
-      "status": "Due Soon"
-    },
-    {
-      "txn": "TXN-2024-0035",
-      "title": "Clean Code",
-      "author": "Robert C. Martin",
-      "issued": "20 May 2025",
-      "due": "03 Jun 2025",
-      "status": "Overdue"
-    }
-  ],
-  "return-history": [
-    {
-      "txn": "TXN-2024-0029",
-      "title": "Operating System Concepts",
-      "author": "Silberschatz",
-      "issued": "01 Apr 2025",
-      "returned": "14 Apr 2025",
-      "fine": "Rs. 0",
-      "status": "Returned on time"
-    },
-    {
-      "txn": "TXN-2024-0022",
-      "title": "Computer Networks",
-      "author": "Tanenbaum",
-      "issued": "10 Mar 2025",
-      "returned": "28 Mar 2025",
-      "fine": "Rs. 0",
-      "status": "Returned on time"
-    },
-    {
-      "txn": "TXN-2024-0018",
-      "title": "Artificial Intelligence: A Modern Approach",
-      "author": "Russell & Norvig",
-      "issued": "15 Feb 2025",
-      "returned": "05 Mar 2025",
-      "fine": "Rs. 45",
-      "status": "Returned late — fine paid"
-    },
-    {
-      "txn": "TXN-2024-0011",
-      "title": "Software Engineering",
-      "author": "Ian Sommerville",
-      "issued": "02 Jan 2025",
-      "returned": "20 Jan 2025",
-      "fine": "Rs. 0",
-      "status": "Returned on time"
-    },
-    {
-      "txn": "TXN-2024-0007",
-      "title": "Discrete Mathematics",
-      "author": "Kenneth Rosen",
-      "issued": "10 Dec 2024",
-      "returned": "28 Dec 2024",
-      "fine": "Rs. 0",
-      "status": "Returned on time"
+      "hint": "re-enter the same password to confirm"
     }
   ]
 }

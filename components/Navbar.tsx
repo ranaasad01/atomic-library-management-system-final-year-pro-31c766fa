@@ -26,12 +26,18 @@ export default function Navbar() {
         e.preventDefault();
         document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
       }
+      // If not on homepage, let the getLinkHref redirect to /#section — no preventDefault
     }
     setMobileOpen(false);
   };
 
-  const getLinkHref = (href: string) => {
+  const getLinkHref = (href: string): string => {
+    if (href.startsWith("/")) {
+      // Route link — return as-is
+      return href;
+    }
     if (href.startsWith("#")) {
+      // Anchor link — smooth scroll on homepage, navigate to /#anchor elsewhere
       return pathname === "/" ? href : "/" + href;
     }
     return href;
@@ -81,6 +87,35 @@ export default function Navbar() {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-1">
+            {/* Home link */}
+            <Link
+              href="/"
+              onClick={(e) => handleNavClick(e, "/")}
+              className="px-3 py-2 rounded text-sm font-medium transition-all duration-200"
+              style={{
+                color: isActive("/") && pathname === "/"
+                  ? "var(--accent)"
+                  : "rgba(245,240,232,0.85)",
+                backgroundColor: isActive("/") && pathname === "/"
+                  ? "rgba(200,169,110,0.12)"
+                  : "transparent",
+              }}
+              onMouseEnter={(e) => {
+                if (!(isActive("/") && pathname === "/")) {
+                  (e.currentTarget as HTMLElement).style.color = "var(--card)";
+                  (e.currentTarget as HTMLElement).style.backgroundColor = "rgba(255,255,255,0.08)";
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (!(isActive("/") && pathname === "/")) {
+                  (e.currentTarget as HTMLElement).style.color = "rgba(245,240,232,0.85)";
+                  (e.currentTarget as HTMLElement).style.backgroundColor = "transparent";
+                }
+              }}
+            >
+              Home
+            </Link>
+
             {navLinks.map((link) => {
               const label = navT[link.key] ?? link.label;
               const href = getLinkHref(link.href);
@@ -101,18 +136,14 @@ export default function Navbar() {
                   }}
                   onMouseEnter={(e) => {
                     if (!active) {
-                      (e.currentTarget as HTMLElement).style.color =
-                        "var(--card)";
-                      (e.currentTarget as HTMLElement).style.backgroundColor =
-                        "rgba(255,255,255,0.08)";
+                      (e.currentTarget as HTMLElement).style.color = "var(--card)";
+                      (e.currentTarget as HTMLElement).style.backgroundColor = "rgba(255,255,255,0.08)";
                     }
                   }}
                   onMouseLeave={(e) => {
                     if (!active) {
-                      (e.currentTarget as HTMLElement).style.color =
-                        "rgba(245,240,232,0.85)";
-                      (e.currentTarget as HTMLElement).style.backgroundColor =
-                        "transparent";
+                      (e.currentTarget as HTMLElement).style.color = "rgba(245,240,232,0.85)";
+                      (e.currentTarget as HTMLElement).style.backgroundColor = "transparent";
                     }
                   }}
                 >
@@ -120,96 +151,103 @@ export default function Navbar() {
                 </Link>
               );
             })}
+
+            {/* About link */}
+            <Link
+              href="/about"
+              onClick={(e) => handleNavClick(e, "/about")}
+              className="px-3 py-2 rounded text-sm font-medium transition-all duration-200"
+              style={{
+                color: isActive("/about")
+                  ? "var(--accent)"
+                  : "rgba(245,240,232,0.85)",
+                backgroundColor: isActive("/about")
+                  ? "rgba(200,169,110,0.12)"
+                  : "transparent",
+              }}
+              onMouseEnter={(e) => {
+                if (!isActive("/about")) {
+                  (e.currentTarget as HTMLElement).style.color = "var(--card)";
+                  (e.currentTarget as HTMLElement).style.backgroundColor = "rgba(255,255,255,0.08)";
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (!isActive("/about")) {
+                  (e.currentTarget as HTMLElement).style.color = "rgba(245,240,232,0.85)";
+                  (e.currentTarget as HTMLElement).style.backgroundColor = "transparent";
+                }
+              }}
+            >
+              About &amp; Help
+            </Link>
           </div>
 
-          {/* Right side */}
-          <div className="hidden md:flex items-center gap-2">
-            {/* User menu */}
-            <div className="relative">
+          {/* Right side: user menu + mobile toggle */}
+          <div className="flex items-center gap-2">
+            {/* User dropdown */}
+            <div className="relative hidden md:block">
               <button
                 onClick={() => setUserMenuOpen((v) => !v)}
-                className="flex items-center gap-2 px-3 py-2 rounded text-sm font-medium transition-all duration-200"
+                className="flex items-center gap-1.5 px-3 py-2 rounded text-sm font-medium transition-all duration-200"
                 style={{ color: "rgba(245,240,232,0.85)" }}
                 onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLElement).style.backgroundColor =
-                    "rgba(255,255,255,0.08)";
+                  (e.currentTarget as HTMLElement).style.color = "var(--card)";
+                  (e.currentTarget as HTMLElement).style.backgroundColor = "rgba(255,255,255,0.08)";
                 }}
                 onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLElement).style.backgroundColor =
-                    "transparent";
+                  (e.currentTarget as HTMLElement).style.color = "rgba(245,240,232,0.85)";
+                  (e.currentTarget as HTMLElement).style.backgroundColor = "transparent";
                 }}
-                aria-label="User menu"
+                aria-expanded={userMenuOpen}
+                aria-haspopup="true"
               >
-                <div
-                  className="w-7 h-7 rounded-full flex items-center justify-center"
-                  style={{ backgroundColor: "var(--accent)" }}
-                >
-                  <User className="w-3.5 h-3.5 text-white" aria-hidden="true" />
-                </div>
-                <span className="hidden lg:block">Ahmed</span>
-                <ChevronDown className="w-3.5 h-3.5" aria-hidden="true" />
+                <User className="w-4 h-4" aria-hidden="true" />
+                <span>Account</span>
+                <ChevronDown
+                  className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                    userMenuOpen ? "rotate-180" : ""
+                  }`}
+                  aria-hidden="true"
+                />
               </button>
 
               <AnimatePresence>
                 {userMenuOpen && (
                   <motion.div
-                    initial={{ opacity: 0, y: -8, scale: 0.96 }}
+                    initial={{ opacity: 0, y: 6, scale: 0.97 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: -8, scale: 0.96 }}
+                    exit={{ opacity: 0, y: 6, scale: 0.97 }}
                     transition={{ duration: 0.15, ease: "easeOut" }}
-                    className="absolute right-0 mt-1 w-48 rounded-lg border shadow-card overflow-hidden"
-                    style={{
-                      backgroundColor: "var(--card)",
-                      borderColor: "var(--border)",
-                    }}
+                    className="absolute right-0 mt-1 w-48 rounded-xl border bg-white shadow-[0_4px_24px_-4px_rgba(30,58,95,0.18)] overflow-hidden"
+                    style={{ borderColor: "var(--border)" }}
                   >
-                    <div
-                      className="px-4 py-3 border-b"
-                      style={{ borderColor: "var(--border)" }}
-                    >
-                      <p
-                        className="text-sm font-semibold"
-                        style={{ color: "var(--foreground)" }}
-                      >
-                        Ahmed Khan
-                      </p>
-                      <p
-                        className="text-xs"
-                        style={{ color: "var(--muted-foreground)" }}
-                      >
-                        Member · S2021-BCS-045
-                      </p>
-                    </div>
                     <Link
                       href="/dashboard"
-                      className="flex items-center gap-2 px-4 py-2.5 text-sm transition-colors"
-                      style={{ color: "var(--foreground)" }}
                       onClick={() => setUserMenuOpen(false)}
-                      onMouseEnter={(e) => {
-                        (e.currentTarget as HTMLElement).style.backgroundColor =
-                          "var(--background)";
-                      }}
-                      onMouseLeave={(e) => {
-                        (e.currentTarget as HTMLElement).style.backgroundColor =
-                          "transparent";
-                      }}
+                      className="flex items-center gap-2.5 px-4 py-2.5 text-sm transition-colors hover:bg-[var(--background)]"
+                      style={{ color: "var(--foreground)" }}
                     >
                       <User className="w-4 h-4" aria-hidden="true" />
                       My Dashboard
                     </Link>
                     <Link
-                      href="/auth"
-                      className="flex items-center gap-2 px-4 py-2.5 text-sm transition-colors w-full text-left"
-                      style={{ color: "#dc2626" }}
+                      href="/admin"
                       onClick={() => setUserMenuOpen(false)}
-                      onMouseEnter={(e) => {
-                        (e.currentTarget as HTMLElement).style.backgroundColor =
-                          "#fef2f2";
-                      }}
-                      onMouseLeave={(e) => {
-                        (e.currentTarget as HTMLElement).style.backgroundColor =
-                          "transparent";
-                      }}
+                      className="flex items-center gap-2.5 px-4 py-2.5 text-sm transition-colors hover:bg-[var(--background)]"
+                      style={{ color: "var(--foreground)" }}
+                    >
+                      <BookOpen className="w-4 h-4" aria-hidden="true" />
+                      Admin Panel
+                    </Link>
+                    <div
+                      className="border-t my-1"
+                      style={{ borderColor: "var(--border)" }}
+                    />
+                    <Link
+                      href="/auth"
+                      onClick={() => setUserMenuOpen(false)}
+                      className="flex items-center gap-2.5 px-4 py-2.5 text-sm transition-colors hover:bg-red-50"
+                      style={{ color: "#dc2626" }}
                     >
                       <LogOut className="w-4 h-4" aria-hidden="true" />
                       Sign Out
@@ -218,25 +256,26 @@ export default function Navbar() {
                 )}
               </AnimatePresence>
             </div>
-          </div>
 
-          {/* Mobile menu button */}
-          <button
-            className="md:hidden p-2 rounded transition-colors"
-            style={{ color: "rgba(245,240,232,0.85)" }}
-            onClick={() => setMobileOpen((v) => !v)}
-            aria-label={mobileOpen ? "Close menu" : "Open menu"}
-          >
-            {mobileOpen ? (
-              <X className="w-5 h-5" aria-hidden="true" />
-            ) : (
-              <Menu className="w-5 h-5" aria-hidden="true" />
-            )}
-          </button>
+            {/* Mobile menu toggle */}
+            <button
+              className="md:hidden p-2 rounded transition-colors"
+              style={{ color: "rgba(245,240,232,0.85)" }}
+              onClick={() => setMobileOpen((v) => !v)}
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileOpen}
+            >
+              {mobileOpen ? (
+                <X className="w-5 h-5" aria-hidden="true" />
+              ) : (
+                <Menu className="w-5 h-5" aria-hidden="true" />
+              )}
+            </button>
+          </div>
         </div>
       </nav>
 
-      {/* Mobile menu */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -247,10 +286,23 @@ export default function Navbar() {
             className="md:hidden border-t overflow-hidden"
             style={{
               backgroundColor: "var(--primary)",
-              borderColor: "rgba(200,169,110,0.2)",
+              borderColor: "rgba(200,169,110,0.15)",
             }}
           >
             <div className="px-4 py-3 space-y-1">
+              {/* Home */}
+              <Link
+                href="/"
+                onClick={(e) => handleNavClick(e, "/")}
+                className="block px-3 py-2.5 rounded text-sm font-medium transition-colors"
+                style={{
+                  color: pathname === "/" ? "var(--accent)" : "rgba(245,240,232,0.85)",
+                  backgroundColor: pathname === "/" ? "rgba(200,169,110,0.12)" : "transparent",
+                }}
+              >
+                Home
+              </Link>
+
               {navLinks.map((link) => {
                 const label = navT[link.key] ?? link.label;
                 const href = getLinkHref(link.href);
@@ -263,49 +315,57 @@ export default function Navbar() {
                     className="block px-3 py-2.5 rounded text-sm font-medium transition-colors"
                     style={{
                       color: active ? "var(--accent)" : "rgba(245,240,232,0.85)",
-                      backgroundColor: active
-                        ? "rgba(200,169,110,0.12)"
-                        : "transparent",
+                      backgroundColor: active ? "rgba(200,169,110,0.12)" : "transparent",
                     }}
                   >
                     {label}
                   </Link>
                 );
               })}
-              <div
-                className="pt-3 mt-3 border-t"
-                style={{ borderColor: "rgba(200,169,110,0.2)" }}
+
+              {/* About */}
+              <Link
+                href="/about"
+                onClick={(e) => handleNavClick(e, "/about")}
+                className="block px-3 py-2.5 rounded text-sm font-medium transition-colors"
+                style={{
+                  color: isActive("/about") ? "var(--accent)" : "rgba(245,240,232,0.85)",
+                  backgroundColor: isActive("/about") ? "rgba(200,169,110,0.12)" : "transparent",
+                }}
               >
-                <div className="flex items-center gap-3 px-3 py-2 mb-2">
-                  <div
-                    className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0"
-                    style={{ backgroundColor: "var(--accent)" }}
-                  >
-                    <User className="w-4 h-4 text-white" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <p
-                      className="text-sm font-semibold"
-                      style={{ color: "var(--card)" }}
-                    >
-                      Ahmed Khan
-                    </p>
-                    <p
-                      className="text-xs"
-                      style={{ color: "rgba(200,169,110,0.85)" }}
-                    >
-                      S2021-BCS-045
-                    </p>
-                  </div>
-                </div>
+                About &amp; Help
+              </Link>
+
+              <div
+                className="border-t pt-2 mt-2"
+                style={{ borderColor: "rgba(200,169,110,0.15)" }}
+              >
+                <Link
+                  href="/dashboard"
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center gap-2 px-3 py-2.5 rounded text-sm font-medium transition-colors"
+                  style={{ color: "rgba(245,240,232,0.85)" }}
+                >
+                  <User className="w-4 h-4" aria-hidden="true" />
+                  My Dashboard
+                </Link>
+                <Link
+                  href="/admin"
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center gap-2 px-3 py-2.5 rounded text-sm font-medium transition-colors"
+                  style={{ color: "rgba(245,240,232,0.85)" }}
+                >
+                  <BookOpen className="w-4 h-4" aria-hidden="true" />
+                  Admin Panel
+                </Link>
                 <Link
                   href="/auth"
-                  className="flex items-center gap-2 px-3 py-2.5 rounded text-sm font-medium transition-colors"
-                  style={{ color: "#fca5a5" }}
                   onClick={() => setMobileOpen(false)}
+                  className="flex items-center gap-2 px-3 py-2.5 rounded text-sm font-medium transition-colors"
+                  style={{ color: "rgba(200,169,110,0.85)" }}
                 >
                   <LogOut className="w-4 h-4" aria-hidden="true" />
-                  Sign Out
+                  Sign In / Register
                 </Link>
               </div>
             </div>
